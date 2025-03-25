@@ -17,14 +17,17 @@ public class Main {
             v[i] = sc.nextDouble();
         }
 
+        int posicao = 0;
         double maiorValor = v[0];
-        for (double maior : v) {
-            if (maior > maiorValor) {
-                maiorValor = maior;
+        for (int i = 1; i < v.length; i++) {
+            if (v[i] > maiorValor) {
+                maiorValor = v[i];
+                posicao = i;
             }
         }
-
         System.out.printf("MAIOR VALOR = %.2f%n", maiorValor);
+
+        System.out.println("POSIÇÃO DO MAIOR VALOR = " + posicao);
 
         sc.close();
     }
